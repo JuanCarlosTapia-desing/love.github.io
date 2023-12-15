@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-        margin: 0;
+      margin: 0;
       padding: 0;
       display: flex;
       align-items: center;
@@ -28,7 +28,8 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      line-height: 100px
+      line-height: 1.5;
+      font-size: 16px; /* o un valor específico */
     }
 
     #canvas {
@@ -37,7 +38,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      
     }
 
     #cardContent {
@@ -95,6 +95,47 @@
     
     <div id="cardContent">
       <span id="heartIcon">❤️</span>
+      <p id="cartaReal">
+          -Ultimamente no me he sentido
+          muy bien , suelo pensar mucho
+          y muy poco, es extraño. A veces
+          trato de estudiar , pero no se
+          me queda en lka memoria , no se
+          si ando disperso o simplemente
+          necesito despejarme.
+          <br><br>
+          -Tener una relacion de pareja
+          es complicado y siento que este año
+          fue mas complicado que el anterior,
+          deonde me esforze tanto por nada.
+          Aprendi que no es tan importante esforzarte tanto
+          por algo, solo es bueno esforzarte lo suficiente
+          para sentirte bien contigo mismo y eso me costo mucho tiempo
+          aprenderrlo, me hubiera gustado saberlo antes, pero no
+          me arrepiento de nada, solo quiero seguir a delante y seguir
+          aprendiendo muchas mas cosas, como te lo dije al comienzo. <br><br>
+          -Tanto por lo que hemos pasado y hemos querido seguir juntos,
+          porque esto es de los dos y agradezco el haberte conocido , de verdad
+          me gusta mucho pasar tiempo a tu lado. <br><br>
+
+          -Recuerdo que al comienzo, cuando te conoci siempre pensaba, en que regalo hacerte
+          ya que no me gustan mucho las manualidades y siempre tuve un pensamiento borroso
+          de que regalarte. Porque tu me dijiste una vez que no te hacia regalos
+          Hechos por mi y no tenia idea de que hacerte, asi que no se me ocurrio mejor idea
+          que hacerte una pagina web simple de momento para escribirte esto. <br>
+          Aunque paresca simple me llevo bastante tiempo, no tenia mucha idea de como hacer una
+          ya que no tuvimos profesor de esta materia pero he ido estudiando, motivandome y
+          aprendiendo lo que me gusta para poder darte esto. No es algo material, pero si es algo que hice con mucho escfuerzo. <br><br>
+          -Asi espero ir mejorando cada dia mas para que se simplifique
+          todo este trabajo, no es mucho y lo siento 🥺 pero es lo que mejor se me da
+          y mejor se hacer. <br><br>
+
+          <h3>❤️Con mucho amor Nonito❤️</h3>
+        
+
+
+
+      </p>
       
     </div>
   </div>
@@ -112,7 +153,7 @@
 
     function resizeCanvas() {
       canvas.width = 1100; // Ajusta el nuevo ancho
-      canvas.height = 1100; // Ajusta el nuevo alto
+      canvas.height = 2000; // Ajusta el nuevo alto
     }
 
     function drawClosedCard() {
@@ -137,6 +178,7 @@
       card.style.height = '80%';
       card.style.width = '80%';
       exit.style.display = "flex";
+      card.style.overflow = "scroll";
     }
 
     // Inicializa la carta cerrada
