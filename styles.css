@@ -13,13 +13,14 @@ body {
     width: 100%;
     height: 100vh;
     z-index: -1; /* Coloca el carrusel por debajo del contenido principal */
+    background-repeat: no-repeat; 
 }
 
 .swiper-slide {
     background-size: cover;
     width: 100%;
     height: 100vh;
-    background-size: contain; /* Ajusta la altura de las diapositivas según sea necesario */
+    background-size: cover; /* Ajusta la altura de las diapositivas según sea necesario */
     background-repeat: no-repeat; 
 }
 
