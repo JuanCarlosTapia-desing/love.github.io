@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    #card {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      line-height: 100px
+    }
+
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    #cardContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #heartIcon {
+      font-size: 50px;
+      color: #ff4d6d;
+    }
+
+    #backButton {
+      display: flex;
+      padding: 8px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #exit {
+        position: fixed;
+        top: 92%;
+        display: none;
+        align-self: flex-start;
+        justify-self: flex-start;
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: #3498db;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid #3498db;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    #exit:hover{
+        background-color: #fff;
+        color: #3498db;
+    }
+
+  </style>
+</head>
+<body>
+    <a href="index.html" id="exit">volver</a>
+  <div id="card">
+    <canvas id="canvas"></canvas>
+    
+    <div id="cardContent">
+      <span id="heartIcon">❤️</span>
+      
+    </div>
+  </div>
+  
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const card = document.getElementById('card');
+    const exit = document.getElementById('exit');
+    const val = false
+
+    canvas.width = 300;
+    canvas.height = 200;
+
+    function resizeCanvas() {
+      canvas.width = 1100; // Ajusta el nuevo ancho
+      canvas.height = 1100; // Ajusta el nuevo alto
+    }
+
+    function drawClosedCard() {
+      // Dibuja líneas para simular la apariencia de una carta cerrada
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = '#000';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
+
+      // Dibuja el corazón en el medio
+      const heartSize = 30;
+      const x = canvas.width / 2 - heartSize / 2;
+      const y = canvas.height / 2 - heartSize / 2;
+      drawHeart(x, y, heartSize, '#ff4d6d');
+    }
+
+    function drawOpenedCard() {
+      // Dibuja el contenido de la carta abierta (sin orillas y corazón)
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      card.style.height = '80%';
+      card.style.width = '80%';
+      exit.style.display = "flex";
+    }
+
+    // Inicializa la carta cerrada
+    drawClosedCard();
+
+
+
+    if (val == false){
+        card.addEventListener('click', () => {
+            // Abre la carta al hacer clic
+            card.style.transition = 'transform 1s ease-in-out'; // Ajusta el valor '2s' según sea necesario
+            card.style.transform = 'rotateY(360deg)';
+
+            setTimeout(function() {
+                console.log('Esta parte se ejecutará después de 2 segundos.');
+                // Muestra el botón de volver cuando la carta está abierta
+                // Oculta el contenido visual del sobre cerrado
+                document.getElementById('heartIcon').style.display = 'none';
+                // Dibuja el contenido de la carta abierta
+                drawOpenedCard();
+                // Ajusta el tamaño del canvas al abrir la carta
+                resizeCanvas();
+                val = true;
+                
+            }, 800);
+        });
+    }else{
+        card.addEventListener('click', () => {
+            
+        });
+    }
+        
+
+    
+
+   
+
+    function drawHeart(x, y, color) {
+        // Utiliza el emoji ❤️ en lugar de dibujar el corazón
+        ctx.font = '50px serif';
+        ctx.fillStyle = color;
+        const textWidth = ctx.measureText('❤️').width;
+        const textHeight = 50; // El emoji tiene una altura fija
+        ctx.fillText('❤️', x - textWidth / 4, y + textHeight / 3);
+    }
+
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Código QR</title>
+</head>
+<body>
+    <div id="qrcode"></div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+        // Contenido o datos que deseas codificar en el QR
+        const contenidoQR = "https://sutreke.github.io/love.github.io/";
+
+        // Configuración del generador de QR
+        const configuracionQR = {
+            text: contenidoQR,
+            width: 128,
+            height: 128
+        };
+
+        // Genera el QR y lo muestra en el elemento con id "qrcode"
+        const qrcode = new QRCode(document.getElementById("qrcode"), configuracionQR);
+    </script>
+</body>
+</html>
