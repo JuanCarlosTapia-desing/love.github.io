@@ -1,6 +1,5 @@
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -59,7 +58,6 @@ p {
     margin-top: 10%;
     left: 10%; /* Ajuste para dispositivos móviles */
     position: relative;
-    font-family: cursive;
     background: rgba(255, 255, 255, 0.5);
 }
 
