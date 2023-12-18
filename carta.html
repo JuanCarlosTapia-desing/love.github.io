@@ -161,18 +161,18 @@
     let escribir;
 
     const txtUno = '-Ultimamente no me he sentido '+
-      'muy bien , suelo pensar mucho '+
+      'muy bien, suelo pensar mucho '+
       'y muy poco, es extraño. A veces '+
-      'trato de estudiar , pero no se '+
-      'me queda en la memoria , no se '+
+      'trato de estudiar, pero no se '+
+      'me queda en la memoria, no se '+
       'si ando disperso o simplemente '+
       ' necesito despejarme.'+
       '\n\n'+
       ' -Tener una relacion de pareja '+
       ' es complicado y siento que este año '+
       ' fue mas complicado que el anterior,'+
-      'deonde me esforze tanto por nada.'+
-      'Aprendi que no es tan importante esforzarte tanto '+
+      ' donde me esforze tanto por nada.'+
+      ' Aprendi que no es tan importante esforzarte tanto '+
       'por algo, solo es bueno esforzarte lo suficiente '+
       'para sentirte bien contigo mismo y eso me costo mucho tiempo '+
       'aprenderlo, me hubiera gustado saberlo antes, pero no '+
@@ -188,7 +188,7 @@
       'que hacerte una pagina web simple de momento para escribirte esto. ';
     const txtDos = '-Aunque paresca simple me llevo bastante tiempo, no tenia mucha idea de como hacer una '+
           'ya que no tuvimos profesor de esta materia pero he ido estudiando, motivandome y '+
-          'aprendiendo, lo que me gusta para poder darte esto. No es algo material, pero si es algo que hice con mucho escfuerzo. /n/n'+
+          'aprendiendo, lo que me gusta para poder darte esto. No es algo material, pero si es algo que hice con mucho escfuerzo. \n\n'+
           '-Asi espero ir mejorando cada dia mas para que se simplifique '+
           'todo este trabajo, no es mucho y lo siento 🥺 pero es lo que mejor se me da '+
           'y mejor se hacer. \n\n' +
@@ -281,9 +281,8 @@
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       card.style.height = '80%';
       card.style.width = '80%';
-      // exit.style.display = "flex";
+      card.style.overflow = 'auto';
       btnNext.style.display = "inline-block";
-      
     }
 
     function goExit(){
@@ -292,36 +291,41 @@
     
     function goBack() {
       if(pag === 2){
+        pag--;
+        detenerEscritura();
         card.style.transition = 'transform 0.2s ease-in-out'; // Ajusta el valor '2s' según sea necesario
         card.style.transform = 'rotateY(180deg)';
         setTimeout(function() {
           btnPrev.style.display = "none";
           card.style.transition = 'transform 0s ease-in-out'; // Ajusta el valor '2s' según sea necesario
           card.style.transform = 'rotateY(0deg)';
+          reiniciarEscritura(txtUno, 1);
         }, 200);
         title.style.display = 'flex';
-        detenerEscritura();
-        reiniciarEscritura(txtUno, 1);
-        pag--;
+
       }
       if(pag === 3){
+        pag--;
+        detenerEscritura();
         card.style.transition = 'transform 0.2s ease-in-out'; // Ajusta el valor '2s' según sea necesario
         card.style.transform = 'rotateY(180deg)';
         setTimeout(function() {
           btnPrev.style.display = "inline-block";
           card.style.transition = 'transform 0s ease-in-out'; // Ajusta el valor '2s' según sea necesario
           card.style.transform = 'rotateY(0deg)';
+          reiniciarEscritura(txtDos, 1);
         }, 200);
-        detenerEscritura();
+        
         cierre.style.display = 'none';
-        reiniciarEscritura(txtDos, 1);
         btnNext.style.display = 'inline-block';
-        pag--;
+        exit.style.display = 'none';
       } 
     }
 
     function goForward() {
       if(pag == 1){
+        pag++;
+        detenerEscritura();
         card.style.transition = 'transform 0.2s ease-in-out'; // Ajusta el valor '2s' según sea necesario
         card.style.transform = 'rotateY(180deg)';
         title.style.display = 'none';
@@ -329,21 +333,19 @@
           btnPrev.style.display = "inline-block";
           card.style.transition = 'transform 0s ease-in-out'; // Ajusta el valor '2s' según sea necesario
           card.style.transform = 'rotateY(0deg)';
+          reiniciarEscritura(txtDos, 25);
         }, 200);
+      }else if(pag === 2){
         pag++;
         detenerEscritura();
-        reiniciarEscritura(txtDos, 25);
-      }else if(pag === 2){
         card.style.transition = 'transform 0.2s ease-in-out'; // Ajusta el valor '2s' según sea necesario
         card.style.transform = 'rotateY(180deg)';
         setTimeout(function() {
           btnPrev.style.display = "inline-block";
           card.style.transition = 'transform 0s ease-in-out'; // Ajusta el valor '2s' según sea necesario
           card.style.transform = 'rotateY(0deg)';
+          reiniciarEscritura(txtTres, 25);
         }, 200);
-        pag++;
-        detenerEscritura();
-        reiniciarEscritura(txtTres, 25);
         cierre.style.display = 'flex';
         btnNext.style.display = 'none';
         exit.style.display = 'inline-block';
