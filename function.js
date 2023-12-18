@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             index++;
             setTimeout(function () {
                 escribirTexto(index);
-            }, 50); // Ajusta el tiempo entre caracteres (en milisegundos)
+            }, 20); // Ajusta el tiempo entre caracteres (en milisegundos)
         }
     }
 
