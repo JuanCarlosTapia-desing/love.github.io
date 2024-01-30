@@ -9,10 +9,10 @@ body {
 
 .swiper-container {
     position: fixed;
-    top: 20%;
+    top: 0;
     left: 0;
-    width: 25%;
-    height: 70%; /* Coloca el carrusel por debajo del contenido principal */
+    width: 0;
+    height: 0; /* Coloca el carrusel por debajo del contenido principal */
 }
 
 .swiper-slide {
