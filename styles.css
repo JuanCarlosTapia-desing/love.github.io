@@ -164,13 +164,18 @@ main {
 
 /* Media query para ajustes en dispositivos más pequeños */
 @media screen and (max-width: 768px) {
+    body{
+        background-size: auto;
+    }
+
     .intro {
         width: 90%;
         left: 5%;
     }
 
     .hover-container {
-        width: calc(50% + 20px); /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
+        height: 150px;
+        width: calc(50% + 80%); /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
     }
 
     .hover-container:hover {
