@@ -5,6 +5,7 @@ body {
     background-image: url(./img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: black/;
 }
 
 .swiper-container {
@@ -165,7 +166,7 @@ main {
 /* Media query para ajustes en dispositivos más pequeños */
 @media screen and (max-width: 768px) {
     body{
-        background-size: auto;
+        background-size: 100vh;
     }
 
     .intro {
@@ -174,7 +175,7 @@ main {
     }
 
     .hover-container {
-        width: calc(50% + 200px); /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
+        width: 1200px; /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
     }
 
     .hover-container:hover {
