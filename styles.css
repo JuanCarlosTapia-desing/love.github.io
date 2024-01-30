@@ -179,9 +179,10 @@ main {
 
     .swiper-container {
         width: 100%; /* El carrusel ocupa el 100% del ancho en pantallas pequeñas */
-        height: auto; /* La altura se ajusta automáticamente */
-        top: 50%; /* Lo posiciona en el centro verticalmente */
-        transform: translateY(-50%);
+        height: 100vh; /* La altura se ajusta automáticamente */
+        top: 0; /* Lo posiciona en el centro verticalmente */
+        left: 0;
+        z-index: -1;
     }
 
 /* ... (estilos anteriores) ... */
