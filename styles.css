@@ -83,7 +83,7 @@ main {
 }
 
 .hover-container {
-    width: calc(33.33% - 40px); /* Ajusta el ancho para que haya tres contenedores por fila y añade margen */
+    width: calc(33.33% - 180px); /* Ajusta el ancho para que haya tres contenedores por fila y añade margen */
     margin: 20px;
     height: 135px;
     position: relative;
@@ -170,7 +170,7 @@ main {
     }
 
     .hover-container {
-        width: calc(50% - 40px); /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
+        width: calc(50% - 25px); /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
     }
 
     .hover-container:hover {
