@@ -24,14 +24,14 @@ body {
 }
 
 header {
-    background-color: #bd056a67;
+    background-color: #89034d60;
     padding: 15px;
     text-align: center;
     color: #fff;
     position: relative;
 }
 header p{
-    background-color: #710d44b2;
+    background-color: #a8065f;
     padding: 20px;
     text-align: center;
     color: #fff;
@@ -41,9 +41,6 @@ header p{
 h1 {
     margin: 0;
     font-size: 36px;
-    text-align: center;
-    color: #ff00dd;
-    
 }
 
 p {
@@ -63,6 +60,53 @@ p {
     position: relative;
     background: rgba(255, 255, 255, 0.5);
 }
+
+.corazon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d6d;
+    clip-path: polygon(50% 15%, 100% 0, 100% 45%, 50% 100%, 0 45%, 0 0);
+    animation: corazones 2s linear infinite;
+}
+
+.corazon:nth-child(1) {
+    top: 10%; /* Ajuste para dispositivos móviles */
+    left: 30%; /* Ajuste para dispositivos móviles */
+    animation-duration: 2s;
+}
+
+.corazon:nth-child(2) {
+    top: 30%; /* Ajuste para dispositivos móviles */
+    left: 60%; /* Ajuste para dispositivos móviles */
+    animation-duration: 3s;
+}
+
+.corazon:nth-child(3) {
+    top: 60%; /* Ajuste para dispositivos móviles */
+    left: 15%; /* Ajuste para dispositivos móviles */
+    animation-duration: 2.5s;
+}
+
+.corazon:nth-child(4) {
+    top: 20%; /* Ajuste para dispositivos móviles */
+    left: 40%; /* Ajuste para dispositivos móviles */
+    animation-duration: 2.2s;
+}
+
+.corazon:nth-child(5) {
+    top: 50%; /* Ajuste para dispositivos móviles */
+    left: 10%; /* Ajuste para dispositivos móviles */
+    animation-duration: 2.8s;
+}
+
+.corazon:nth-child(6) {
+    top: 20%; /* Ajuste para dispositivos móviles */
+    left: 70%; /* Ajuste para dispositivos móviles */
+    animation-duration: 2.4s;
+}
+
+/* Añade más corazones según sea necesario */
 
 @keyframes corazones {
     0% {

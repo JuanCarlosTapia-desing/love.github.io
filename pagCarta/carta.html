@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">]
+  
+  <title>Carta Real</title>
+</head>
+<body>
+  <div id="card">
+    <canvas id="canvas"></canvas>
+    
+    <div id="cardContent">
+      <span id="heartIcon">❤️</span>
+      <h1 id="title" class="tituloCarta">EL VERDADERO AMOR</h1>
+      <p id="texto">      
+      </p>
+      <h3 id="cierre">❤️Con mucho amor Nonito❤️</h3>
+    </div>
+  </div>
+
+  <div id="botones">
+    <button id="btnPrev" class="btn btn-prev" onclick="goBack()">Volver</button>
+    <button id="btnNext" class="btn btn-next" onclick="goForward()">Siguiente</button>
+    <button id="btnExit" class="btn btn-exit" onclick="goExit()">Pagina Inicio</button>
+    
+</div>
+
+<script src="./function.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
