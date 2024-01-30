@@ -5,7 +5,6 @@ body {
     background-image: url(./img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: black/;
 }
 
 .swiper-container {
@@ -165,17 +164,13 @@ main {
 
 /* Media query para ajustes en dispositivos más pequeños */
 @media screen and (max-width: 768px) {
-    body{
-        background-size: 100vh;
-    }
-
     .intro {
         width: 90%;
         left: 5%;
     }
 
     .hover-container {
-        width: 1200px; /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
+        width: calc(50% - 30px); /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
     }
 
     .hover-container:hover {
@@ -183,9 +178,9 @@ main {
     }
 
     .swiper-container {
-        width: 0; /* El carrusel ocupa el 100% del ancho en pantallas pequeñas */
-        height: 0; /* La altura se ajusta automáticamente */
-        top: 0; /* Lo posiciona en el centro verticalmente */
+        width: 100%; /* El carrusel ocupa el 100% del ancho en pantallas pequeñas */
+        height: auto; /* La altura se ajusta automáticamente */
+        top: 50%; /* Lo posiciona en el centro verticalmente */
         transform: translateY(-50%);
     }
 
