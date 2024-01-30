@@ -170,7 +170,7 @@ main {
     }
 
     .hover-container {
-        width: calc(50% - 25px); /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
+        width: calc(50% + 20px); /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
     }
 
     .hover-container:hover {
@@ -178,9 +178,9 @@ main {
     }
 
     .swiper-container {
-        width: 100%; /* El carrusel ocupa el 100% del ancho en pantallas pequeñas */
-        height: auto; /* La altura se ajusta automáticamente */
-        top: 50%; /* Lo posiciona en el centro verticalmente */
+        width: 0; /* El carrusel ocupa el 100% del ancho en pantallas pequeñas */
+        height: 0; /* La altura se ajusta automáticamente */
+        top: 0; /* Lo posiciona en el centro verticalmente */
         transform: translateY(-50%);
     }
 
