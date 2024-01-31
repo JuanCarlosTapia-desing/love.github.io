@@ -24,12 +24,12 @@ h2{
 
 .fuente{
     padding-top: 1%;
-    margin-left: 10%;
+    margin-left: 40%;
     align-items: center;
     justify-content: center;
     align-content: center;
     justify-content: center;
-    width: 80%;
+    width: 20%;
     height: 10%;
     background-color: rgba(255, 255, 255, 0.404);
 }
@@ -52,7 +52,7 @@ h2{
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    margin-left: 35%;
+    margin-left: 46%;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 40px;
@@ -62,3 +62,26 @@ h2{
     background-color: #555;
   }
   
+
+  @media screen and (max-width: 768px) {
+    .fuente{
+        padding-top: 1%;
+        margin-left: 10%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-content: center;
+        width: 80%;
+        height: 10%;
+        background-color: rgba(255, 255, 255, 0.404);
+    }
+
+    
+     .btn {
+
+        margin-left: 32%;
+        margin-top: 2%;
+
+      }
+    
+  }
