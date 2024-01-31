@@ -171,7 +171,7 @@ main {
 
     .hover-container {
         width: calc(50% - 30px); /* Ajusta el ancho para que haya dos contenedores por fila en dispositivos móviles */
-        height: 120px;
+        height: 115px;
     }
 
     .hover-container:hover {
